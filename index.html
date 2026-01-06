@@ -6,12 +6,12 @@
   <title>Đại Sứ ChainOpera AI | Tino Ha</title>
   <style>
     :root {
-      --primary: #ef4444;   /* red - nổi bật hơn trên nền tối */
-      --secondary: #3b82f6; /* blue - sáng, neon-friendly */
-      --bg: #0f172a;        /* dark slate (tailwind slate-900) */
-      --card-bg: #1e293b;   /* slate-800 */
-      --text: #e2e8f0;      /* slate-200 */
-      --text-muted: #94a3b8; /* slate-400 */
+      --primary: #ef4444;   /* red */
+      --secondary: #3b82f6; /* blue */
+      --bg: #0f172a;        /* dark slate */
+      --card-bg: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
       --shadow: 0 4px 12px rgba(0,0,0,0.3);
       --glow: 0 0 12px rgba(59, 130, 246, 0.4);
     }
@@ -33,19 +33,11 @@
       border-radius: 12px;
       box-shadow: var(--shadow);
     }
-    .logo-header {
-      display: flex; align-items: center; justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .logo-header img {
-      height: 60px;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
-    }
     h1 {
       color: #fff;
       margin: 0.5rem 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      text-align: center;
       text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
     }
     h2 {
@@ -96,6 +88,14 @@
       margin-bottom: 1.5rem;
       box-shadow: var(--shadow);
     }
+    .ambassador-signature {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-align: center;
+      margin: 1rem 0;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
@@ -103,13 +103,9 @@
     <!-- Banner -->
     <img src="assets/banner.png" alt="Vietnam Ambassador - ChainOpera AI" class="banner" loading="lazy">
 
-    <!-- Logo Header -->
-    <div class="logo-header">
-      <img src="assets/logo.png" alt="ChainOpera AI Logo" loading="lazy">
-      <h1>Đại Sứ ChainOpera AI</h1>
-    </div>
-
-    <p style="text-align: center; font-weight: 600; color: var(--secondary);">by <strong>Tino Ha</strong></p>
+    <!-- Title -->
+    <h1>Đại Sứ ChainOpera AI</h1>
+    <p class="ambassador-signature">by <strong>Tino Ha</strong></p>
 
     <div class="section">
       <h2>Giới thiệu bản thân</h2>
