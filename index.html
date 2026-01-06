@@ -6,15 +6,21 @@
   <title>Đại Sứ ChainOpera AI | Tino Ha</title>
   <style>
     :root {
-      --primary: #e63946;
-      --secondary: #1d3557;
-      --light: #f1faee;
-      --gray: #8d99ae;
-      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --primary: #ef4444;   /* red - nổi bật hơn trên nền tối */
+      --secondary: #3b82f6; /* blue - sáng, neon-friendly */
+      --bg: #0f172a;        /* dark slate (tailwind slate-900) */
+      --card-bg: #1e293b;   /* slate-800 */
+      --text: #e2e8f0;      /* slate-200 */
+      --text-muted: #94a3b8; /* slate-400 */
+      --shadow: 0 4px 12px rgba(0,0,0,0.3);
+      --glow: 0 0 12px rgba(59, 130, 246, 0.4);
     }
     body {
-      margin: 0; font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #fafafa; color: #333; line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     .container {
       max-width: 800px; margin: 0 auto; padding: 2rem;
@@ -34,14 +40,19 @@
     }
     .logo-header img {
       height: 60px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
     }
     h1 {
-      color: var(--primary); margin: 0.5rem 0;
+      color: #fff;
+      margin: 0.5rem 0;
       font-size: 1.8rem;
+      text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
     }
     h2 {
-      color: var(--secondary); border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.4rem; margin-top: 2rem;
+      color: var(--secondary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
     }
     .links {
       list-style: none; padding: 0;
@@ -63,17 +74,27 @@
     .links a:hover {
       background: var(--primary);
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(230,57,70,0.3);
+      box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
     }
     footer {
-      text-align: center; margin-top: 3rem; color: var(--gray);
+      text-align: center; margin-top: 3rem; color: var(--text-muted);
       font-size: 0.9rem;
     }
     .agent-info {
-      background: #fff8f8; border-left: 4px solid var(--primary);
-      padding: 1rem; margin: 1.5rem 0;
+      background: rgba(59, 130, 246, 0.05);
+      border-left: 4px solid var(--secondary);
+      padding: 1rem;
+      margin: 1.5rem 0;
       border-radius: 0 6px 6px 0;
       font-size: 0.95rem;
+      backdrop-filter: blur(4px);
+    }
+    .section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
     }
   </style>
 </head>
@@ -88,24 +109,25 @@
       <h1>Đại Sứ ChainOpera AI</h1>
     </div>
 
-    <p style="text-align: center; font-weight: 600; color: #1d3557;">by <strong>Tino Ha</strong></p>
+    <p style="text-align: center; font-weight: 600; color: var(--secondary);">by <strong>Tino Ha</strong></p>
 
-    <section>
+    <div class="section">
       <h2>Giới thiệu bản thân</h2>
       <p>Xin chào! Tôi là <strong>Tino Ha</strong>, một người đam mê công nghệ, đặc biệt là AI và Web3. Tôi tham gia ChainOpera AI với vai trò Đại sứ để đồng hành, lan tỏa và đóng góp vào hệ sinh thái sáng tạo, thông minh và tự chủ.</p>
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
       <h2>Về ChainOpera AI</h2>
       <p>ChainOpera AI là nền tảng AI đa tác tử (multi-agent AI) được xây dựng cho hệ sinh thái Web3 — nơi các AI Agent có thể tương tác, cộng tác và tạo giá trị thực trong môi trường phi tập trung.</p>
       
       <div class="agent-info">
         🎯 <strong>PrediMarket Agent</strong> (by <code>0x13b5...46Bd</code>)<br>
-        Agent tiên phong cho dự đoán thị trường dựa trên dữ liệu on-chain & sentiment — hiện đang mở cho cộng đồng thử nghiệm.
+        Agent tiên phong cho dự đoán thị trường dựa trên dữ liệu on-chain & sentiment — hiện đang mở cho cộng đồng thử nghiệm.  
+        <br><em style="font-size:0.85rem; color:var(--text-muted)">💬 No comments yet — Come and write the first comment!!!</em>
       </div>
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
       <h2>Tham gia ngay</h2>
       <ul class="links">
         <li><a href="https://chat.chainopera.ai/invite?code=A7048EVS" target="_blank">🎁 Tham gia Airdrop Season 2</a></li>
@@ -114,7 +136,7 @@
         <li><a href="https://x.com/ducpickbigwin" target="_blank">𝕏 @ducpickbigwin</a></li>
         <li><a href="https://discord.gg/t68u7uZ7" target="_blank">💬 Discord</a></li>
       </ul>
-    </section>
+    </div>
 
     <footer>
       <p>© 2026 Tino Ha | Đại sứ ChainOpera AI Season 2</p>
