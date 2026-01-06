@@ -6,21 +6,26 @@
   <title>Đại Sứ ChainOpera AI | Tino Ha</title>
   <style>
     :root {
-      --primary: #ef4444;   /* red */
-      --secondary: #3b82f6; /* blue */
-      --bg: #0f172a;        /* dark slate */
-      --card-bg: #1e293b;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --shadow: 0 4px 12px rgba(0,0,0,0.3);
-      --glow: 0 0 12px rgba(59, 130, 246, 0.4);
+      --primary: #ef4444;
+      --secondary: #00b4db;
+      --text: #ffffff;
+      --text-muted: #a5f3fc;
+      --card-bg: rgba(10, 25, 47, 0.7);
+      --glow: 0 0 16px rgba(0, 180, 219, 0.5);
     }
     body {
       margin: 0;
       font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
+      background: linear-gradient(135deg, #000428, #004e92, #00b4db);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       color: var(--text);
       line-height: 1.6;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     .container {
       max-width: 800px; margin: 0 auto; padding: 2rem;
@@ -31,14 +36,15 @@
       object-fit: cover;
       margin-bottom: 2rem;
       border-radius: 12px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
     h1 {
-      color: #fff;
+      color: #ffffff;
       margin: 0.5rem 0;
-      font-size: 2rem;
+      font-size: 2.1rem;
       text-align: center;
-      text-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+      text-shadow: 0 0 10px rgba(0, 180, 219, 0.6);
+      letter-spacing: 1px;
     }
     h2 {
       color: var(--secondary);
@@ -55,16 +61,17 @@
     .links a {
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background: var(--secondary);
+      background: rgba(0, 180, 219, 0.2);
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: var(--shadow);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(0, 180, 219, 0.3);
     }
     .links a:hover {
-      background: var(--primary);
+      background: rgba(239, 68, 68, 0.3);
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
     }
@@ -73,28 +80,32 @@
       font-size: 0.9rem;
     }
     .agent-info {
-      background: rgba(59, 130, 246, 0.05);
+      background: rgba(0, 30, 60, 0.4);
       border-left: 4px solid var(--secondary);
       padding: 1rem;
       margin: 1.5rem 0;
       border-radius: 0 6px 6px 0;
       font-size: 0.95rem;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(0, 180, 219, 0.2);
     }
     .section {
       background: var(--card-bg);
       padding: 1.5rem;
       border-radius: 12px;
       margin-bottom: 1.5rem;
-      box-shadow: var(--shadow);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(0, 180, 219, 0.15);
     }
     .ambassador-signature {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      color: var(--secondary);
+      color: #a5f3fc;
       text-align: center;
       margin: 1rem 0;
-      letter-spacing: 1px;
+      text-shadow: 0 0 6px rgba(0, 180, 219, 0.4);
+      letter-spacing: 1.5px;
     }
   </style>
 </head>
@@ -119,7 +130,7 @@
       <div class="agent-info">
         🎯 <strong>PrediMarket Agent</strong> (by <code>0x13b5...46Bd</code>)<br>
         Agent tiên phong cho dự đoán thị trường dựa trên dữ liệu on-chain & sentiment — hiện đang mở cho cộng đồng thử nghiệm.  
-        <br><em style="font-size:0.85rem; color:var(--text-muted)">💬 No comments yet — Come and write the first comment!!!</em>
+        <br><em style="font-size:0.85rem; color:#6ee7f5">💬 No comments yet — Come and write the first comment!!!</em>
       </div>
     </div>
 
